@@ -23,7 +23,8 @@ public class InMemoryStuRepoImpl implements StuRepo {
     }
 
     @Override
-    public void update(Student student) {
+    public Student update(Student student) {
         database.replace(student.getId(),student);
+        return student;
     }
 }
